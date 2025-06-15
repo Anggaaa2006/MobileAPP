@@ -288,4 +288,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const SizedBox(height: 16),
                   
                   // Cancel Button
-                  if (_
+                  if (_isEditing)
+                    CustomButton(
+                      text: 'Batal',
+                      backgroundColor: AppColors.lightGray,
+                      textColor: AppColors.darkGray,
+                      onPressed: () {
+                        setState(() {
+                          _isEditing = false;
+                          _errorMessage = null;
+                        });
+                        _loadUserData();
+                      },
+                    ),
+                  
+                  const SizedBox(height: 24),
+                  
+                  // Sign Out Button
+                  if (!_isEditing)
+                    CustomButton(
+                      text: 'Keluar',
+                      backgroundColor: AppColors.error,
+                      icon: Icons.logout,
+                      onPressed: _signOut,
+                    ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
