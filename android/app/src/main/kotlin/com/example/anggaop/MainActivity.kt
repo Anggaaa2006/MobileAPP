@@ -1,4 +1,4 @@
-package com.example.anggaop
+package com.example.billbuddy
 
 import io.flutter.embedding.android.FlutterActivity
 
