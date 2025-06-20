@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'firebase_options.dart'; // ✅ Tambahkan ini
 import 'services/auth_service.dart';
 import 'services/bill_service.dart';
 import 'services/notification_service.dart';
@@ -10,14 +12,16 @@ import 'utils/app_colors.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   try {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform, // ✅ Ini penting
+    );
     await NotificationService().initialize();
   } catch (e) {
     print('Firebase initialization error: $e');
   }
-  
+
   runApp(const BillBuddyApp());
 }
 

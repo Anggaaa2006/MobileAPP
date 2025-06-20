@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1041211637118:android:7cc5c9adc3cf7cece0872f",
+        "android_client_info": {
+          "package_name": "com.example.awaul"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv2mFmx-jx-sUySrWbb6LMoTscFvakDqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1041211637118:android:0f9b45f2e7491a63e0872f",
         "android_client_info": {
           "package_name": "com.example.billbuddy"
