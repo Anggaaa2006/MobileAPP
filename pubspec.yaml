@@ -11,14 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Firebase Core & Layanan
-  firebase_core: ^2.32.0
+  # Firebase Core & Layanan - Versi yang kompatibel
+  firebase_core: ^2.24.2
   firebase_auth: ^4.15.3
   cloud_firestore: ^4.13.6
   firebase_messaging: ^14.7.9
-
-  # Web compatibility (untuk push notif)
-  js: ^0.6.7
 
   # UI & Utility
   cupertino_icons: ^1.0.8
@@ -40,6 +37,8 @@ flutter:
 flutter_intl:
   enabled: true
 
-# Hanya gunakan override kalau benar-benar perlu (di sini tetap dipertahankan)
+# Gunakan versi yang kompatibel untuk web
 dependency_overrides:
-  firebase_auth_web: 5.8.9
+  firebase_auth_web: ^5.8.12
+  firebase_messaging_web: ^3.5.18
+  js: ^0.6.7
